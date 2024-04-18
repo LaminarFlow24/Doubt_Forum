@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,15 +84,16 @@ body {
   
     
     .sidebar {
-      height: 100%;
-      width: 250px;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: #c68888;
+      height:83.3%;
+      width: 500px;
+      position:absolute;
+      top: 132px;
+      right: 0;
+      background-color: #d0edf9;
       padding-top: 20px;
       padding-left: 20px;
       font-style: normal;
+      box-shadow: -10px 0 10px -5px rgba(0,0,0,0.123)
       
     }
     
@@ -197,9 +199,12 @@ body {
           <section>
           
           <img src="{{ url_for('video_feed') }}" width="640" height="480" style="display: block;
-          margin-left: auto;
+          margin-left:25px;
           margin-right: auto;">
-    
+
+          <div class="sidebar">
+            <h2>Exercise Information</h2>
+        </div>
          
 
 
