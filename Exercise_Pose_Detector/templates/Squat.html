@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #100c0c;
+    overflow-x: hidden;
+  }
+  header {
+    background-color: #31b5d6;
+    color: #f5f2f2;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  
+  main{
+      background-color:#42b6cd;
+      padding-top: 45px;
+      padding-left: 250px;
+      
+      
+  }
+  
+  
+  .navbar a:hover{
+      background-color:#127593;
+      color:rgb(17, 12, 12);
+  
+  }
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 20px;
+  }
+  
+  .exercise {
+    background-color: #011108;
+    border: 1px solid #f8f8fa;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s linear;
+  }
+  .exercise:hover {
+    transform: scale(1.05);
+  }
+  
+  .exercise a img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+  }
+
+  .exercise img {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+  }
+  .exercise h1 {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #faf7f7;
+    align-self: auto;
+  }
+  
+  .exercise p {
+    color: #efe1e1;
+    text-align: center;
+  }
+  
+  
+  
+    
+    .sidebar {
+      height: 100%;
+      width: 250px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #c68888;
+      padding-top: 20px;
+      padding-left: 20px;
+      font-style: normal;
+      
+    }
+    
+    .sidebar a {
+      text-decoration: none;
+      padding: 15px;
+      font-size: 18px;
+      color: #818181;
+      display: block;
+    }
+    
+    .sidebar a:hover {
+      color: #f1f1f1;
+    }
+    
+    .content {
+      margin-left: 250px;
+      padding: 16px;
+    }
+    
+    /* Add responsive styles if needed */
+    @media screen and (max-width: 600px) {
+      .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+      }
+      .sidebar a {
+        text-align: center;
+        float: none;
+      }
+      .content {
+        margin-left: 0;
+      }
+    }
+    .main h1 {  
+      top: 30px;
+      position: relative;
+      width: 120vw;
+      text-align: center;
+  }
+  footer {
+    background-color: #31b5d6;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+    bottom: 0;
+    width: 100%;
+  }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body background="C:\Users\Admin\Desktop\codes web page\PBL\website pic.png">
+    
+    <header>
+        <H1>SQUAT COUNTER</H1>
+    </header>
+
+    
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Navbar</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Help&Support</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Privacy Policy</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#"><Link></Link></a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                      <li><a class="dropdown-item" href="#">CONTACT US</a></li>
+                      <li><a class="dropdown-item" href="#">020-2426630</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">postureinfo@gmail.com</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+          <section>
+          
+          <img src="{{ url_for('video_feed') }}" width="640" height="480" style="display: block;
+          margin-left: auto;
+          margin-right: auto;">
+    
+         
+
+
+
+
+   </SECTION> 
+   <footer>
+    <p>&copy; 2024 Posture Website. All rights reserved.</p>
+  </footer>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>
